@@ -2,7 +2,7 @@
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
     xmlns:android="http://schemas.android.com/apk/res/android"
     id="vinoos-cordova-iap"
-    version="1.0.1">
+    version="1.0.2">
     <name>Vinoos-Cordova-IAP</name>
     <description>Vinoos plugin for In-App Purchases</description>
     <author>Vinoos</author>
@@ -17,12 +17,11 @@
     <js-module src="www/iap.js" name="iap">
         <clobbers target="window.iap" />
     </js-module>    
-
+	
+	<preference name="PERMISSION" default="com.farsitel.bazaar.permission.PAY_THROUGH_BAZAAR" />
 	
 	<!-- android -->
 	<platform name="android">
-		<preference name="PERMISSION" default="com.farsitel.bazaar.permission.PAY_THROUGH_BAZAAR" />
-		
 		<config-file target="res/xml/config.xml" parent="/*">
 			<feature name="IAP">
 				<param name="android-package" value="vinoos.cordova.iap.IAP"/>
