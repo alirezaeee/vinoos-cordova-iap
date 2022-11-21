@@ -13,7 +13,7 @@
  * limitations under the License.
  */
 
-package vinoos.cordova.iap;
+package vinoos.cordova.iap.util;
 
 /**
  * Exception thrown when something went wrong with in-app billing.
@@ -21,7 +21,6 @@ package vinoos.cordova.iap;
  * To get the IAB result that caused this exception to be thrown,
  * call {@link #getResult()}.
  */
-@SuppressWarnings("serial")
 public class IabException extends Exception {
     IabResult mResult;
 

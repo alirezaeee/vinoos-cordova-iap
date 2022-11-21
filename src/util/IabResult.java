@@ -13,7 +13,7 @@
  * limitations under the License.
  */
 
-package vinoos.cordova.iap;
+package vinoos.cordova.iap.util;
 
 /**
  * Represents the result of an in-app billing operation.

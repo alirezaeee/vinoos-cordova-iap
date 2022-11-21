@@ -13,7 +13,7 @@
  * limitations under the License.
  */
 
-package vinoos.cordova.iap;
+package vinoos.cordova.iap.util;
 
 import org.json.JSONException;
 import org.json.JSONObject;

@@ -16,7 +16,12 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.util.Log;
-import vinoos.cordova.iap.IabHelper.OnConsumeFinishedListener;
+import vinoos.cordova.iap.util.IabHelper;
+import vinoos.cordova.iap.util.IabHelper.OnConsumeFinishedListener;
+import vinoos.cordova.iap.util.IabResult;
+import vinoos.cordova.iap.util.Inventory;
+import vinoos.cordova.iap.util.Purchase;
+import vinoos.cordova.iap.util.SkuDetails;
 
 public class IAP extends CordovaPlugin {
 
@@ -55,7 +60,7 @@ public class IAP extends CordovaPlugin {
         if (PublicKey != null) {
         	mMarket = Market;
             iabHelper = new IabHelper(context, PublicKey, Market);
-            iabHelper.setSkipPurchaseVerification(false);
+            //iabHelper.setSkipPurchaseVerification(false);
             billingInitialized = false;
             return true;
         }

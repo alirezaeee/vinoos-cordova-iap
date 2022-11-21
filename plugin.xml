@@ -2,7 +2,7 @@
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
     xmlns:android="http://schemas.android.com/apk/res/android"
     id="vinoos-cordova-iap"
-    version="1.0.3">
+    version="1.1.2">
     <name>Vinoos-Cordova-IAP</name>
     <description>Vinoos plugin for In-App Purchases</description>
     <author>Vinoos</author>
@@ -32,16 +32,26 @@
 			<uses-permission android:name="$PERMISSION" />
 		</config-file>
 
+		<hook type="after_plugin_install" src="hooks/after_plugin_install.js" />
+
 		<source-file src="src/IInAppBillingService.aidl" target-dir="src/com/android/vending/billing" />
         <source-file src="src/IAP.java" target-dir="src/vinoos/cordova/iap" />
-        <source-file src="src/Base64.java" target-dir="src/vinoos/cordova/iap" />
-        <source-file src="src/Base64DecoderException.java" target-dir="src/vinoos/cordova/iap" />
-        <source-file src="src/IabException.java" target-dir="src/vinoos/cordova/iap" />
-        <source-file src="src/IabHelper.java" target-dir="src/vinoos/cordova/iap" />
-        <source-file src="src/IabResult.java" target-dir="src/vinoos/cordova/iap" />
-        <source-file src="src/Inventory.java" target-dir="src/vinoos/cordova/iap" />
-        <source-file src="src/Security.java" target-dir="src/vinoos/cordova/iap" />
-        <source-file src="src/SkuDetails.java" target-dir="src/vinoos/cordova/iap" />
-        <source-file src="src/Purchase.java" target-dir="src/vinoos/cordova/iap" />
+        <source-file src="src/util/AbortableCountDownLatch.java" target-dir="src/vinoos/cordova/iap/util" />
+        <source-file src="src/util/Base64.java" target-dir="src/vinoos/cordova/iap/util" />
+        <source-file src="src/util/Base64DecoderException.java" target-dir="src/vinoos/cordova/iap/util" />
+        <source-file src="src/util/BroadcastIAB.java" target-dir="src/vinoos/cordova/iap/util" />
+        <source-file src="src/util/IAB.java" target-dir="src/vinoos/cordova/iap/util" />
+        <source-file src="src/util/IabException.java" target-dir="src/vinoos/cordova/iap/util" />
+        <source-file src="src/util/IabHelper.java" target-dir="src/vinoos/cordova/iap/util" />
+        <source-file src="src/util/IABLogger.java" target-dir="src/vinoos/cordova/iap/util" />
+        <source-file src="src/util/IABReceiver.java" target-dir="src/vinoos/cordova/iap/util" />
+        <source-file src="src/util/IabResult.java" target-dir="src/vinoos/cordova/iap/util" />
+        <source-file src="src/util/Inventory.java" target-dir="src/vinoos/cordova/iap/util" />
+        <source-file src="src/util/Purchase.java" target-dir="src/vinoos/cordova/iap/util" />
+        <source-file src="src/util/Security.java" target-dir="src/vinoos/cordova/iap/util" />
+        <source-file src="src/util/ServiceIAB.java" target-dir="src/vinoos/cordova/iap/util" />
+        <source-file src="src/util/SkuDetails.java" target-dir="src/vinoos/cordova/iap/util" />
+        <source-file src="src/util/communication/BillingSupportCommunication.java" target-dir="src/vinoos/cordova/iap/util/communication" />
+        <source-file src="src/util/communication/OnConnectListener.java" target-dir="src/vinoos/cordova/iap/util/communication" />
 	</platform>
 </plugin>
