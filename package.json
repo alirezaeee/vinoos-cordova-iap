@@ -1,6 +1,6 @@
 {
   "name": "vinoos-cordova-iap",
-  "version": "1.1.2",
+  "version": "1.1.4",
   "description": "Vinoos plugin for In-App Purchases",
   "cordova": {
     "id": "vinoos-cordova-iap",
